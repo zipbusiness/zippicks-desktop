@@ -1,0 +1,31 @@
+{
+    "name": "zippicks/core",
+    "description": "ZipPicks Core Plugin - Enterprise authentication and infrastructure",
+    "type": "wordpress-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ZipPicks",
+            "email": "dev@zippicks.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "firebase/php-jwt": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZipPicks\\Core\\": "includes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}
