@@ -1,0 +1,366 @@
+/**
+ * Master Critic Admin Styles
+ * Functional WordPress admin interface styling
+ */
+
+/* Dashboard Layout */
+.zpmc-dashboard-container .card,
+.zpmc-sets-container .card,
+.zpmc-import-container .card,
+.zpmc-settings-container .card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Statistics Cards */
+.zpmc-stats-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.zpmc-stats-row .card {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.zpmc-stats-row .card h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.zpmc-stats-row .card p {
+    margin: 0;
+    font-size: 14px;
+    color: #646970;
+}
+
+/* Dashboard Actions */
+.zpmc-actions-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.zpmc-actions-row .card {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.zpmc-actions-row .card h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Status Badges */
+.zpmc-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.zpmc-status-published {
+    background: #d7eddd;
+    color: #00a32a;
+}
+
+.zpmc-status-draft {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Sets Table Enhancements */
+.zpmc-sets-container .wp-list-table td,
+.zpmc-sets-container .wp-list-table th {
+    vertical-align: middle;
+}
+
+.zpmc-item-count {
+    color: #646970;
+    font-size: 13px;
+}
+
+.zpmc-actions {
+    white-space: nowrap;
+}
+
+.zpmc-actions .button {
+    margin-right: 5px;
+}
+
+/* Delete Confirmation Modal */
+#zpmc-delete-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+    display: none;
+}
+
+.zpmc-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    cursor: pointer;
+}
+
+.zpmc-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    max-width: 400px;
+    width: 90%;
+    z-index: 100001;
+}
+
+.zpmc-modal-content h2 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+.zpmc-modal-content p {
+    margin: 0 0 15px 0;
+}
+
+.zpmc-modal-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.zpmc-modal-actions .button {
+    margin-left: 10px;
+}
+
+/* Empty States */
+.zpmc-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+}
+
+.zpmc-empty-state .dashicons {
+    font-size: 48px;
+    color: #c3c4c7;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.zpmc-empty-state h2 {
+    color: #23282d;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.zpmc-empty-state p {
+    color: #646970;
+    margin: 0 0 30px 0;
+}
+
+/* Import Form */
+.zpmc-import-container .form-table th {
+    width: 150px;
+}
+
+.zpmc-import-container .description {
+    font-style: normal;
+    color: #646970;
+}
+
+.zpmc-import-container pre {
+    background: #f6f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.zpmc-import-container .spinner {
+    margin-left: 10px;
+}
+
+#import-result {
+    margin-top: 15px;
+}
+
+/* Settings Page */
+.zpmc-settings-container .card h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    font-size: 18px;
+}
+
+.zpmc-cache-tools {
+    margin: 15px 0;
+}
+
+.zpmc-cache-tools .button {
+    margin-right: 10px;
+}
+
+.zpmc-cache-tools .spinner {
+    margin-left: 10px;
+}
+
+/* Form Styling */
+.form-table td fieldset label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-table td fieldset label input[type="radio"] {
+    margin-right: 8px;
+}
+
+.form-table td fieldset label input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.form-table input.small-text {
+    width: 70px;
+}
+
+/* Validation Feedback */
+input.invalid {
+    border-color: #d63638 !important;
+}
+
+input.valid {
+    border-color: #00a32a !important;
+}
+
+/* System Status Indicators */
+.zpmc-status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.zpmc-status-indicator.active {
+    background-color: #00a32a;
+}
+
+.zpmc-status-indicator.warning {
+    background-color: #dba617;
+}
+
+.zpmc-status-indicator.error {
+    background-color: #d63638;
+}
+
+/* Bulk Actions */
+.tablenav .actions {
+    padding: 2px 0;
+}
+
+.tablenav select {
+    margin-right: 5px;
+}
+
+/* Loading States */
+.zpmc-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.zpmc-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzk5OSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cGF0aCBkPSJtMTAsMiBhOCw4IDAgMCwxIDgsOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA3M2FhIiBzdHJva2Utd2lkdGg9IjIiPgogICAgICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgdmFsdWVzPSIwIDEwIDEwOzM2MCAxMCAxMCIvPgogICAgPC9wYXRoPgo8L3N2Zz4K') center center no-repeat;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .zpmc-stats-row,
+    .zpmc-actions-row {
+        flex-wrap: wrap;
+    }
+    
+    .zpmc-stats-row .card,
+    .zpmc-actions-row .card {
+        min-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .zpmc-stats-row,
+    .zpmc-actions-row {
+        flex-direction: column;
+    }
+    
+    .zpmc-stats-row .card,
+    .zpmc-actions-row .card {
+        min-width: 100%;
+    }
+    
+    .zpmc-modal-content {
+        margin: 20px;
+        width: calc(100% - 40px);
+        transform: translate(-50%, -50%);
+    }
+    
+    .tablenav .actions {
+        margin-bottom: 10px;
+    }
+    
+    .zpmc-actions .button {
+        display: block;
+        margin: 2px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .zpmc-stats-row .card h2 {
+        font-size: 24px;
+    }
+    
+    .zpmc-empty-state {
+        padding: 40px 15px;
+    }
+    
+    .zpmc-empty-state .dashicons {
+        font-size: 32px;
+    }
+    
+    .wp-list-table.fixed {
+        table-layout: auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    #zpmc-delete-modal,
+    .zpmc-modal-backdrop {
+        display: none !important;
+    }
+}
